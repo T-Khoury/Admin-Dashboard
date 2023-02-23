@@ -1,5 +1,24 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oxanium&family=Roboto:wght@500&family=Source+Sans+Pro&display=swap');
 
+body {
+    margin: 0;
+    font-family: "Lato";
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    color: white;
+    background-color: #0284c7;
+    border-radius: 50px;
+    border-style: none;
+    width: 7rem;
+    height: 3rem;
+    font-size: 1rem;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -14,12 +33,61 @@
     background-color: lightblue;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    margin-bottom: 20px;
 }
 .top-bar {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: 
     "search user-info";
+}
+.top-right-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.search-bar-container {
+    display: grid;
+    grid-template-columns: 3rem auto;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.search-bar {
+    height: 2rem;
+    width: 70%;
+    background-color: lightgray;
+    border: none;
+    border-radius: 20px;
+}
+
+
+
+.user-icon-mini {
+    height: 3.5rem;
+
+}
+
+.notification-icon,
+.search-icon {
+    height: 2.2rem;
+}
+.user-icon-container {
+    background-color: rgb(240, 240, 125);
+    height: 3.4rem;
+    width: 3.4rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 100px;
+}
+.user-name-mini {
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .search-bar-container {
@@ -28,22 +96,56 @@
 
 .bottom-bar {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
+    padding: 1rem;
 }
 .share-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
 }
 
 .sidebar {
+    width: 20%;
+    height: 100%;
+    position: fixed;
     grid-area: sidebar;
-    background-color: lightpink;
+    background-color: #0284c7;
     display: grid;
-    grid-template-rows: 1fr 4fr 5fr;
+    grid-template-rows: .2fr 1fr 1fr;
+}
+
+.sidebar-icon {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 1.75rem;
+}
+
+.sidebar-main,
+.sidebar-bottom {  
+    display: grid;
+    row-gap: 1rem;
+    align-content: start;
+    padding-left: 1rem;
+}
+
+.sidebar-bottom-settings,
+.sidebar-bottom-support,
+.sidebar-bottom-privacy {
+    height: fit-content;
+}
+
+.sidebar-main>div,
+.sidebar-bottom>div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-content: center;
 }
 
 .main-content {
-    background-color: lightgreen;
+    background-color: #f8f8f8;
     grid-area: maincontent;
     display: grid;
     grid-template-columns: 4fr 1fr;
