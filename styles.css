@@ -64,11 +64,23 @@ button {
     border: none;
     border-radius: 20px;
 }
+.user-icon {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.user-icon>img {
+    height: 5rem;
+    border-radius: 50%;
+    grid-area: icon;
+}
 
 
 
 .user-icon-mini {
     height: 3.5rem;
+    border-radius: 50%;
 
 }
 
@@ -76,15 +88,7 @@ button {
 .search-icon {
     height: 2.2rem;
 }
-.user-icon-container {
-    background-color: rgb(240, 240, 125);
-    height: 3.4rem;
-    width: 3.4rem;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    border-radius: 100px;
-}
+
 .user-name-mini {
     font-size: 1.4rem;
     font-weight: 600;
@@ -94,10 +98,36 @@ button {
     grid-area: search;
 }
 
+
 .bottom-bar {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     padding: 1rem;
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas: 
+    "icon"
+    "greeting";
+    margin-left: 2rem;
+    align-items: center;
+}
+.greeting-text-content {
+    display: grid;
+}
+
+.hi-there {
+    font-weight: 650;
+    margin: 0;
+}
+.user-name {
+    font-size: 1.8rem;
+    font-weight: 650;
+    margin: 0;
+    margin-top: 1rem;
+
 }
 .share-buttons {
     display: grid;
@@ -145,16 +175,16 @@ button {
 }
 
 .main-content {
-    background-color: #f8f8f8;
+    background-color: #f1f5f9;
     grid-area: maincontent;
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-areas: 
     "projects side";
+    padding: 1rem;
 }
-
-.projects-section {
-    grid-area: projects;
+.project-section {
+    padding: 1rem;
 }
 
 .projects-side {
@@ -164,8 +194,40 @@ button {
 }
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat( auto-fit, minmax(390px, 1fr) );
     grid-template-rows: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 1rem;
+    max-height: 420px;
+}
+.project-card-top {
+    grid-area: project;
+}
+
+.project-preview {
+    max-width: 390px;
+    height: auto;
+}
+.project-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    justify-content: end;
+}
+
+.project-icon {
+    max-height: 2rem;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas: 
+    "project"
+    "icons";
+    padding: 2rem;
+    background-color: white;
+    max-height: 400px;
+
 }
 
 .announcements-content {
