@@ -60,7 +60,7 @@ button {
 .search-bar {
     height: 2rem;
     width: 70%;
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
     border: none;
     border-radius: 20px;
 }
@@ -145,6 +145,25 @@ button {
     display: grid;
     grid-template-rows: .2fr 1fr 1fr;
 }
+.sidebar-header {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: .6rem;
+    gap: 1rem;
+}
+
+.logo {
+    width: 5rem;
+}
+.title {
+    color: white;
+    font-size: 2.5rem;
+    display: grid;
+    justify-items: start;
+    font-weight: 620;
+
+}
 
 .sidebar-icon {
     display: grid;
@@ -153,10 +172,21 @@ button {
     height: 1.75rem;
 }
 
+.sidebar-main a,
+.sidebar-bottom a {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
 .sidebar-main,
 .sidebar-bottom {  
     display: grid;
-    row-gap: 1rem;
+    row-gap: 1.6rem;
     align-content: start;
     padding-left: 1rem;
 }
@@ -197,16 +227,28 @@ button {
     grid-template-columns: repeat( auto-fit, minmax(390px, 1fr) );
     grid-template-rows: repeat(2, 1fr);
     max-width: 100%;
-    gap: 1rem;
+    gap: 2.5rem;
     max-height: 420px;
 }
 .project-card-top {
     grid-area: project;
+    display: grid;
+}
+.project-title {
+    font-size: 1.5rem;
+    margin-top: 0;
+    font-weight: bold;
 }
 
 .project-preview {
     max-width: 390px;
     height: auto;
+    justify-self: center;
+}
+
+.etch-project-preview {
+    max-height: 200px;
+    justify-self: center;
 }
 .project-icons {
     display: grid;
@@ -218,6 +260,12 @@ button {
     max-height: 2rem;
 }
 
+.projects-header {
+    font-size: 2rem;
+    margin-top: 0;
+    font-weight: 500;
+}
+
 .card {
     display: grid;
     grid-template-rows: 5fr 1fr;
@@ -226,7 +274,11 @@ button {
     "icons";
     padding: 2rem;
     background-color: white;
-    max-height: 400px;
+    max-height: 375px;
+    border-radius: 4%;
+    border-left: 12px solid rgb(230, 230, 106);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    padding-bottom: 1rem;
 
 }
 
