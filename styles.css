@@ -71,7 +71,7 @@ button {
 }
 
 .user-icon>img {
-    height: 5rem;
+    height: 5.5rem;
     border-radius: 50%;
     grid-area: icon;
 }
@@ -121,12 +121,13 @@ button {
 .hi-there {
     font-weight: 650;
     margin: 0;
+    font-size: 1.12rem;
 }
 .user-name {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 650;
     margin: 0;
-    margin-top: 1rem;
+    margin-top: .8rem;
 
 }
 .share-buttons {
@@ -208,7 +209,7 @@ button {
     background-color: #f1f5f9;
     grid-area: maincontent;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas: 
     "projects side";
     padding: 1rem;
@@ -218,6 +219,7 @@ button {
 }
 
 .projects-side {
+    height: fit-content;
     grid-area: side;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -228,7 +230,6 @@ button {
     grid-template-rows: repeat(2, 1fr);
     max-width: 100%;
     gap: 2.5rem;
-    max-height: 420px;
 }
 .project-card-top {
     grid-area: project;
@@ -282,11 +283,69 @@ button {
 
 }
 
+.announcement-section {
+    height: fit-content;
+}
+
 .announcements-content {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    background-color: white;
+    padding: 2rem;
+    padding-top: 1rem;
+    border-radius: 10px;
+}
+.announcement {
+    border-bottom: 1px solid gray;
+}
+.last-announcement {
+    border: none;
+}
+.announcement-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: .1rem;
+    margin-top: 1rem;
 }
 
+.announcement-description {
+    margin-top: 0;
+    color: #4b5563;
+}
 .trending-users-container {
     display: grid;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    gap: 1.4rem;
 }
+
+.trending-user-icon img {
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.trending-user-card {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.trending-username,
+.trending-user-description {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.trending-user-description {
+    color: #4b5563;
+}
+
+
+.trending-header,
+.announcements-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
