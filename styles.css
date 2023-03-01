@@ -242,7 +242,7 @@ button {
 }
 
 .project-preview {
-    max-width: 390px;
+    max-width: 90%;
     height: auto;
     justify-self: center;
 }
